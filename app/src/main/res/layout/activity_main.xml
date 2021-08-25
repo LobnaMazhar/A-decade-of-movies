@@ -41,7 +41,8 @@
                     android:text="@={mvm.searchEditTextObservable}"
                     android:textColor="@color/colorDarkText"
                     android:textColorHint="@color/colorGreyText"
-                    android:textSize="@dimen/text_size_medium" />
+                    android:textSize="@dimen/text_size_medium"
+                    textView:editorAction="@{mvm.onEditorActionListener}" />
             </androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.AppBarLayout>
 

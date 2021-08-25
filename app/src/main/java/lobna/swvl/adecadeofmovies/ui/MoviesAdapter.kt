@@ -9,7 +9,7 @@ import lobna.swvl.adecadeofmovies.data.MovieModel
 import lobna.swvl.adecadeofmovies.databinding.ItemMovieBinding
 import kotlin.math.min
 
-class MoviesAdapter(val items: List<MovieModel>) :
+class MoviesAdapter(val items: List<MovieModel>, val searching: Boolean) :
     RecyclerView.Adapter<MoviesAdapter.MoviesViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MoviesViewHolder {
@@ -27,7 +27,7 @@ class MoviesAdapter(val items: List<MovieModel>) :
     }
 
     override fun getItemCount(): Int {
-        return items.size
+        return if (searching) min(items.size, 5) else items.size
     }
 
     inner class MoviesViewHolder(var itemMoviesBinding: ItemMovieBinding) :

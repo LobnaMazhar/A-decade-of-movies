@@ -1,16 +1,16 @@
 package lobna.swvl.adecadeofmovies.repository
 
 import android.content.Context
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
-import lobna.swvl.adecadeofmovies.data.MovieResponse
-import lobna.swvl.adecadeofmovies.utils.Utilities
+import lobna.swvl.adecadeofmovies.data.MovieModel
+import lobna.swvl.adecadeofmovies.database.MyRoomDatabase
 
 object MoviesRepository {
 
-    fun getMovies(context: Context): MovieResponse {
-        val response = Utilities.getJsonDataFromAsset(context, "movies.json")
+    suspend fun insertMovies(context: Context, movies: List<MovieModel>) {
+        movies.forEach { MyRoomDatabase.invoke(context).movieDao().insertMovie(it) }
+    }
 
-        return Gson().fromJson(response, object : TypeToken<MovieResponse>() {}.type)
+    suspend fun getMovies(context: Context, query: String): List<MovieModel> {
+        return MyRoomDatabase.invoke(context).movieDao().getMovies(query)
     }
 }

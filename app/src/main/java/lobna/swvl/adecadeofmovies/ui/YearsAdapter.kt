@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView
 import lobna.swvl.adecadeofmovies.R
 import lobna.swvl.adecadeofmovies.data.MovieModel
 import lobna.swvl.adecadeofmovies.databinding.ItemYearBinding
-import kotlin.math.min
 
 class YearsAdapter(val items: Map<Int, List<MovieModel>>) :
     RecyclerView.Adapter<YearsAdapter.YearsViewHolder>() {
@@ -36,11 +35,25 @@ class YearsAdapter(val items: Map<Int, List<MovieModel>>) :
         return items.size
     }
 
+    var query: String = ""
+
+    fun updateData(query: String) {
+        this.query = query
+
+        keys.clear()
+        keys.addAll(items.keys.toMutableList())
+
+        values.clear()
+        values.addAll(items.values.toMutableList())
+
+        notifyDataSetChanged()
+    }
+
     inner class YearsViewHolder(private var itemYearsBinding: ItemYearBinding) :
         RecyclerView.ViewHolder(itemYearsBinding.root) {
 
         fun bind(year: Int, movies: List<MovieModel>) {
-            itemYearsBinding.yivm = YearItemViewModel(year, movies)
+            itemYearsBinding.yivm = YearItemViewModel(year, movies, query)
         }
     }
 }
