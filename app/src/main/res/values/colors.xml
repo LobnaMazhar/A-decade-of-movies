@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_200">#D6D9EF</color>
+    <color name="blue_500">#4B64EF</color>
+    <color name="blue_700">#2A42C6</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey_bg">#dfdfdf</color>
+
+    <color name="colorBlue">@color/blue_700</color>
+    <color name="colorBlueLight">#C1CAFD</color>
+    <color name="colorBlueText">@color/blue_500</color>
+    <color name="colorGrey">#F5F5F5</color>
+
+    <color name="colorDarkText">#333333</color>
+    <color name="colorGreyText">#A6A6A6</color>
+    <color name="colorDivider">#E2E2E2</color>
+</resources>
