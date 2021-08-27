@@ -1,6 +1,15 @@
 <resources>
     <string name="app_name">A decade of movies</string>
+
+    <!--HOME-->
     <string name="rating">Rating: %s/5</string>
     <string name="year">Year: %s</string>
     <string name="search">Search</string>
+
+    <!--DETAILS-->
+    <string name="movie_was_produced_on">Movie was produced on %s</string>
+    <string name="movie_genres">Movie Genres</string>
+    <string name="movie_cast">Movie cast</string>
+    <string name="movie_gallery">Movie Gallery</string>
+    <string name="actor_name">&#8226; %s</string>
 </resources>

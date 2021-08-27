@@ -1,4 +1,4 @@
-package lobna.swvl.adecadeofmovies.ui
+package lobna.swvl.adecadeofmovies.ui.home
 
 import lobna.swvl.adecadeofmovies.data.MovieModel
 

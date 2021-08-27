@@ -6,7 +6,7 @@
 
         <variable
             name="mivm"
-            type="lobna.swvl.adecadeofmovies.ui.MovieItemViewModel" />
+            type="lobna.swvl.adecadeofmovies.ui.home.MovieItemViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

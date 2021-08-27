@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="civm"
+            type="lobna.swvl.adecadeofmovies.ui.details.CastItemViewModel" />
+    </data>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:text="@{String.format(@string/actor_name, String.valueOf(civm.item))}"
+        android:textColor="@color/colorDarkText"
+        android:textSize="@dimen/text_size_medium" />
+</layout>

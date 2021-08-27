@@ -8,7 +8,7 @@
 
         <variable
             name="yivm"
-            type="lobna.swvl.adecadeofmovies.ui.YearItemViewModel" />
+            type="lobna.swvl.adecadeofmovies.ui.home.YearItemViewModel" />
     </data>
 
     <LinearLayout

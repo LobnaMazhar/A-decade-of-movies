@@ -1,4 +1,4 @@
-package lobna.swvl.adecadeofmovies.ui
+package lobna.swvl.adecadeofmovies.ui.home
 
 import android.app.Application
 import android.content.Context

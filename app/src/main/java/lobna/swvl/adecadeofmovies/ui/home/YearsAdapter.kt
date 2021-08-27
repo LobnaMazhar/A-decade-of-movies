@@ -1,4 +1,4 @@
-package lobna.swvl.adecadeofmovies.ui
+package lobna.swvl.adecadeofmovies.ui.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -17,7 +17,7 @@ class YearsAdapter(val items: Map<Int, List<MovieModel>>) :
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): YearsAdapter.YearsViewHolder {
+    ): YearsViewHolder {
         val itemYearBinding: ItemYearBinding = DataBindingUtil.inflate(
             LayoutInflater.from(parent.context),
             R.layout.item_year,
